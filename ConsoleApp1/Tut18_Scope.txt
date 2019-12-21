@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UnderstandingScope
+{
+    //private static string k = "";
+
+    class Program
+    {
+        //private static string k = "";
+        private static string _k = "";
+
+        static void Main(string[] args)
+        {
+
+            string j = "";
+
+            for (int i = 0; i < 10; i++)
+            {
+                j = i.ToString();
+                _k = i.ToString();
+
+                Console.WriteLine(i);
+
+                if (i == 0)
+                {
+                    string l = i.ToString();
+                }
+
+               
+                //Console.WriteLine(l);
+            }
+            //helperMethod();
+            helperMethod1 temp = new helperMethod1();//call class only? if inside program class, every method has to be static?
+
+            Console.WriteLine("Outside of the for: " + j);
+            //Console.WriteLine("k: " + k);
+
+            Console.ReadLine();
+        }
+
+
+        static void helperMethod()
+        {
+            //static: just called by helperMethod();
+            //otherwise helpMethod temp = new helpMethod(); 
+
+            Console.WriteLine("k from helperMethod: " + _k);
+        }
+
+        //public void helperMethod1()
+        //{
+        //    //static: just called by helperMethod();
+        //    //otherwise helpMethod temp = new helpMethod(); 
+
+        //    Console.WriteLine("k from helperMethod: " + k);
+        //}
+
+    }
+
+    class helperMethod1
+    {
+        public void DoSomething()
+        {
+            Console.WriteLine(helperMethod());
+        }
+
+        private string helperMethod()
+        {
+            return "Hello world";
+        }
+    }
+
+}

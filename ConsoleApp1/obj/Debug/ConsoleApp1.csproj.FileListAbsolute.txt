@@ -1,0 +1,14 @@
+C:\Users\black\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\black\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\black\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\NamespaceAndReferencingAssemblies.exe.config
+C:\Users\black\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\NamespaceAndReferencingAssemblies.exe
+C:\Users\black\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\NamespaceAndReferencingAssemblies.pdb
+C:\Users\black\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\NamespaceAndReferencingAssemblies.exe
+C:\Users\black\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\NamespaceAndReferencingAssemblies.pdb
+C:\Users\black\source\repos\CodePractice\ConsoleApp1\bin\Debug\NamespaceAndReferencingAssemblies.exe.config
+C:\Users\black\source\repos\CodePractice\ConsoleApp1\bin\Debug\NamespaceAndReferencingAssemblies.exe
+C:\Users\black\source\repos\CodePractice\ConsoleApp1\bin\Debug\NamespaceAndReferencingAssemblies.pdb
+C:\Users\black\source\repos\CodePractice\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\black\source\repos\CodePractice\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\black\source\repos\CodePractice\ConsoleApp1\obj\Debug\NamespaceAndReferencingAssemblies.exe
+C:\Users\black\source\repos\CodePractice\ConsoleApp1\obj\Debug\NamespaceAndReferencingAssemblies.pdb

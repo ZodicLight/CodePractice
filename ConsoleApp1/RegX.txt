@@ -1,0 +1,151 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.IO;
+
+namespace regularExp
+{
+    //mpv
+    
+    class Program
+    {
+        //source: https://www.youtube.com/watch?v=NgQVAfceVuM
+        //next: https://www.youtube.com/watch?v=sa-TUpSx1JA&t=6s
+        //https://www.youtube.com/watch?v=Z66TeSTcP-Q
+        //regular expression for pattern 
+        //match one answer first.. what compiler did he use? build it up bit by bit 
+
+        static void Main(string[] args)
+        {
+            bool found = false;
+            int count = 0;
+
+
+            //string pattern = @"([a-zA-Z]+) (\d+)";
+            //string pattern = @"([a-zA-Z]+) (\d+)";//for testing 
+            //string input = "the independence day was celebrated on july 24 and independence day of another country is on august 21";
+
+            //phone number 34323 - 343433543
+            //string pattern = @"(\d+)-(\d+)";
+
+            //string pattern = @"^(\d+)-(\d+)$";//^ begin $end, digtal only for phone number 
+            //string input = "3323-223322";
+            //string input = "my phone number is 3323-223322";
+
+
+            //string pattern = @"^(\w+)@(\w+).([a-z]+)$";//^ begin $end, digtal only
+            //string pattern = @"\.";//  \ is escape character for the next .[{()\^$|?*+
+            //string pattern = @".";//return everything except new Line
+            //string pattern = @"\d";//return all digit
+            //string pattern = @"\w";//return any word character a-z, A-Z, 0-9, _
+            //string pattern = @"\s";//return space, tab, newline
+            //string pattern = @"\s";
+            //string pattern = @"\d\d\d[-.]\d\d\d[-.]\d\d\d\d";
+            //string pattern = @"\d{3}[-.]\d{3}[-.]\d{4}";
+            //string pattern = @"M(r|s|rs)\.?\s[A-Z]\w*";// \.? can be "" or .  | \w just one character  |\w* mean all characters  | w just mean w only
+            //string pattern = @"[a-zA-Z0-9.-_+]+@[a-zA-Z-]+\.[a-zA-Z0-9-.]+";
+
+            //string pattern = @"^https?://[a-zA-Z]+\.[a-zA-Z]+\.[a-zA-Z]+";
+            //string pattern = @"^https?://(www\.)?+\w+\.\w+";//why this cause error?
+            //string pattern = @"^https?://(www\.)?(\w+)(\.\w+)";//how can I only display group2 and group3 only?
+            //string pattern = @"(\w+)(\.\w+)$";//it works!! except qut.edu.au
+            string pattern = @"\b(\w+)\s\1\b";//what is \b for?
+            
+
+            //string input = "jeem123@gmail.com ";
+            //string input = "321--555-4321 or 333.554.4324 or 333*554*4324";
+            //string input = "Mr. Schafer" +
+            //    "Mr Smith" +
+            //    "Ms Davis" +
+            //    "Mrs.Robinson" +
+            //    "Mr. T";
+            //string input = "Mr. T";
+            //string input = "CoreyMSchafer@gmail.com";
+            //string input = "corey.schafer@university.edu";
+            //string input = "corey-321-schafer@university-work.net";
+            //string input = "https://www.goggle.com";//wouldn't work.  edu.au.k just assume two dot 
+            string input = "This is is some text text with double double words some where I I I am not not sure why why I am typing ok? rainbow ranibow unicorn unicorn";
+            
+            //string input = "333.554.4324";
+
+
+
+            MatchCollection collection = Regex.Matches(input, pattern);
+
+            foreach (Match m in collection)
+            {
+                Console.WriteLine(m.Value);
+                //Console.WriteLine(m.Value($2));
+                count = count + 1;
+                found = true;
+            }
+
+            if (found == true)
+            {
+                Console.WriteLine();
+                Console.WriteLine(count + " result found");
+
+            }
+            else
+            {
+                Console.WriteLine("Not Find");
+            }
+
+            //Match match = Regex.Match(input, pattern);
+            //if (match.Success)
+            //{
+            //    Console.WriteLine(match.Value);
+            //    Console.WriteLine("email is valid");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not valid email address");
+            //}
+
+
+            //Match match = Regex.Match(input, pattern);
+            //if (match.Success)
+            //{
+            //    //Console.WriteLine(match.Value);
+            //    Console.WriteLine("phone number is valid");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not valid phone number");
+            //}
+
+            //MatchCollection collection = Regex.Matches(input, pattern);
+
+            //foreach (Match m in collection)
+            //{
+            //    Console.WriteLine(m.Value);
+            //    count = count + 1;
+            //    found = true;
+            //}
+
+            //if (found == true)
+            //{
+            //    Console.WriteLine();
+            //    Console.WriteLine(count + " result found");
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Find");
+            //}
+
+
+
+            Console.ReadLine();//what is the different between ReadKey() and ReadLine()?
+            //Console.ReadKey();//returns a character 
+            //Readkey doesn't work with AMS
+
+        }
+
+
+    }
+
+}

@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UnderstandingScope
+{
+    //private static string k = "";
+
+    class Program
+    {
+        //private static string k = "";
+        private static string _k = "";
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Pick a number between 1 and 100:");
+            string userValue = Console.ReadLine();
+
+            int compareValue = int.Parse(userValue);//this will create runtime error 
+
+            if ((compareValue < 1) || (compareValue > 100))
+                Console.WriteLine("The number you chose was out of bounds.");
+            else if ((compareValue == 42) || (compareValue == 23) || (compareValue > 90))
+                Console.WriteLine();
+            else
+                Console.WriteLine("You didn't find one of the special numbers");
+
+            Console.ReadLine();
+        }
+
+    }
+
+}

@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UnderstandingScope
+{
+    //private static string k = "";
+
+    class Program
+    {
+        //Replace Conditional with Polymorphism
+        //https://refactoring.guru/replace-conditional-with-polymorphism
+
+        //Replace Conditional Statements (IF/ELSE or SWITCH) With Polymorphism
+        //https://www.codementor.io/uditrastogi/replace-conditional-statements-if-else-or-switch-with-polymorphism-ryl8mx4ns
+
+
+        private static string _k = "";
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Type in a super hero's name to see his nickname:");
+            string userValue = Console.ReadLine();
+
+            switch (userValue.ToLower())
+            {
+                case "BATMAN"://magic string is not all and anything hardcode into the program 
+                    Console.WriteLine("Caped Crusader");
+                    break;
+                case "superman":
+                    Console.WriteLine("Man of Steel");
+                    break;
+                case "green lantern":
+                    Console.WriteLine("Emerald Knight");
+                    break;
+                default:
+                    Console.WriteLine("Does not compute");
+                    break;
+
+            }
+
+            Console.ReadLine();
+        }
+
+    }
+
+}

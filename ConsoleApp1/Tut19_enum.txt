@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UsingEnumerations
+{
+    //private static string k = "";
+
+    class Program
+    {
+       
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;//Enumerations is good.. capture error before runtime 
+
+            Superhero myValue = Superhero.Batman;//treat like class
+
+            Console.WriteLine("Hello World!");
+            Console.ReadLine();
+        }
+
+    }
+
+    enum Superhero
+    {
+        Batman,
+        Superman,
+        GreenLantern
+    }
+
+}

@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace UsingEnumerations
+{
+    //private static string k = "";
+
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            try
+            {
+                //identify the exact problem, so they know what to do next
+                //protect end  user from feeling dump and protect data at all cost
+                //make your application polish!! Reliable experience, no surprise!!
+                //use Catch all is not ideal!! 
+
+                //avoid catch all approach.. one catch is not enough 
+
+                StreamReader myReader = new StreamReader("Values1.txt");
+                string line = "";
+
+                while (line != null)
+                {
+                    line = myReader.ReadLine();
+                    if (line != null)
+                        Console.WriteLine(line);
+                }
+
+                myReader.Close();
+            }
+            catch (FileNotFoundException e)//there are more exeception for streamReader
+            {
+                Console.WriteLine("Couldn't find the file. Are you sure you're looking for the right file?");
+            }
+            catch (DirectoryNotFoundException e)//there are more exeception for streamReader
+            {
+                Console.WriteLine("Couldn't find the file. Are you sure that directory exists?");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("We experienced a problem: {0}", e.Message);
+            }
+            finally
+            {
+                //Perform any cleanup to roll back the date or close connections
+            }
+
+            Console.ReadLine();
+        }
+
+    }
+
+    enum Superhero//not working with magic string 
+    {
+        Batman,
+        Superman,
+        GreenLantern
+    }
+
+}

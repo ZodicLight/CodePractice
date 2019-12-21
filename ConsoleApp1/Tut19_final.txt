@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UsingEnumerations
+{
+    //private static string k = "";
+
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Type in a super hero's name to see his nickname:");
+            string userValue = Console.ReadLine();
+
+            Console.ForegroundColor = ConsoleColor.Yellow;//Enumerations is good.. capture error before runtime 
+
+            //Superhero myValue = Superhero.Batman;//treat like class
+            //Console.WriteLine("Hello World!");
+
+            Superhero myValue;
+
+            if (Enum.TryParse<Superhero>(userValue, true, out myValue))//angle bracak 
+            {
+
+                switch (myValue)
+                {
+                    case Superhero.Batman:
+                        Console.WriteLine("Caped Crusader");
+                        break;
+                    case Superhero.Superman:
+                        Console.WriteLine("Man of Steel");
+                        break;
+                    case Superhero.GreenLantern:
+                        Console.WriteLine("Emerald Knight");
+                        break;
+                    default:
+                        Console.WriteLine("Does not compute"); 
+                        break;
+                }
+
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Does not compute");
+            }
+
+            Console.ReadLine();
+        }
+
+    }
+
+    enum Superhero//not working with magic string 
+    {
+        Batman,
+        Superman,
+        GreenLantern
+    }
+
+}
