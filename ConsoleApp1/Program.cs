@@ -5,15 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Diagnostics;
+
 
 namespace bubbleSort
 {
+    //How to Measure Code Execution Time In C#
+    //https://www.youtube.com/watch?v=KfpqlX57kuI
+
     class Program
     {
         static void Main()
         {
-            int[] unsortedList = { 0, 4, 3, 1, 10, 7 };// Why I keep forget about array?
+            Stopwatch MyTimer = new Stopwatch();
+            
+            //int[] unsortedList = { 0, 4, 3, 1, 10, 7 };// Why I keep forget about array?
+            int[] unsortedList = { 4, 3, 1, 10, 7, 0 };// Why I keep forget about array?
             int testOG = 0;//how to pass by reference and value 
+
+            MyTimer.Start();
 
             foreach (int items in unsortedList)
             {
@@ -30,8 +40,10 @@ namespace bubbleSort
                 Console.WriteLine(items);
             }
 
+            MyTimer.Stop();
             //Console.WriteLine("testOG: " + testOG);
             //Console.ReadLine();
+            Console.WriteLine("time taken: " + MyTimer.Elapsed);
         }
 
 
@@ -90,17 +102,32 @@ namespace bubbleSort
 
             for (int i = 0; i < unsortedList.Length - 1; i++)// -1 will prevent the program crash but will it skip a loop and return incomplete result?
             {
-                Console.WriteLine("i: " + i);
+                Console.WriteLine();
+                Console.WriteLine("i outside forLoop: " + i);
+                Console.WriteLine("Length: " + unsortedList.Length);
 
-                for (int j = 0; j < unsortedList.Length - (1 + i); j++)
+                for (int j = 0; j < unsortedList.Length - (1 + i); j++)//2 + 1 length go 
                 {
-                    Console.WriteLine("i2: " + i);
+                    //Console.WriteLine();
+                    //int forLoopLen = unsortedList.Length - (1 + i);
+                    //int forLoopLen = unsortedList.Length;
+                    //Console.WriteLine("i inside forLoop: " + i);
+                    Console.WriteLine("j: " + j);
+                    //Console.WriteLine("length: " + forLoopLen);
 
-                    if (unsortedList[j] > unsortedList[j + 1])
+                    if (unsortedList[j] > unsortedList[j + 1])//compare to the next one
                     {
+
                         temp = unsortedList[j + 1];
                         unsortedList[j + 1] = unsortedList[j];
                         unsortedList[j] = temp;
+
+                        Console.WriteLine("temp ifLoop: " + temp);
+
+                        //Console.WriteLine("unsort[1] ifLoop: " + unsortedList[1]);
+                        //Console.WriteLine("unsort[2] ifLoop: " + unsortedList[2]);
+                        //Console.WriteLine("unsort[3] ifLoop: " + unsortedList[3]);
+                        //int[] unsortedList = { 0, 4, 3, 1, 10, 7 }; 0, 1, 3, 4, 7, 10
 
                     }
 
@@ -111,6 +138,6 @@ namespace bubbleSort
 
             //Console.WriteLine("testOG Inside Class BubbleSort: " + testOG);
         }
-    }   
+    }
 
 }

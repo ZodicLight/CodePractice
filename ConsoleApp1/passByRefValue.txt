@@ -1,0 +1,86 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.IO;
+
+namespace bubbleSort
+{
+    class Program
+    {
+        static void Main()
+        {
+            string name1 = "Peter";
+            string name2 = "Joe";
+
+            bubbleSort bubble = new bubbleSort();
+            bubble.Swap(ref name1, ref name2);//still the same?
+            //bubble.Swap(name1, name2);
+            //bubble.BubbleSort(unsortedList, testOG);//still the same?
+
+            //Console.ReadLine();
+
+            Console.WriteLine("Main() finish: " + name1 + " " + name2);
+
+
+
+
+        }
+
+
+
+    }
+
+    class bubbleSort
+    {
+        //pass by reference? 
+
+        public void Swap(ref string name1,ref string name2)//pass by reference 
+        {
+            string temp;
+            //string name1 = "Peter";
+            //string name2 = "Joe";
+
+            Console.WriteLine("bubbleSort before: " + name1 + " " + name2);                             
+
+            temp = name1;             
+            name1 = name2;
+            name2 = temp;
+
+            Console.WriteLine();
+            Console.WriteLine("bubbleSort after: " + name1 + " " + name2);
+
+
+            //for (int j = 0; j < unsortedList.Length - (1 + i); j++)//2 + 1 length go 
+            //{
+            //    //Console.WriteLine();
+            //    //int forLoopLen = unsortedList.Length - (1 + i);
+            //    //int forLoopLen = unsortedList.Length;
+            //    //Console.WriteLine("i inside forLoop: " + i);
+            //    Console.WriteLine("j: " + j);
+            //    //Console.WriteLine("length: " + forLoopLen);
+
+            //    if (unsortedList[j] > unsortedList[j + 1])//compare to the next one
+            //    {
+
+            //        temp = unsortedList[j + 1];
+            //        unsortedList[j + 1] = unsortedList[j];
+            //        unsortedList[j] = temp;
+
+            //        Console.WriteLine("temp ifLoop: " + temp);
+
+            //        Console.WriteLine("unsort[1] ifLoop: " + unsortedList[1]);
+            //        Console.WriteLine("unsort[2] ifLoop: " + unsortedList[2]);
+            //        Console.WriteLine("unsort[3] ifLoop: " + unsortedList[3]);
+            //        //int[] unsortedList = { 0, 4, 3, 1, 10, 7 }; 0, 1, 3, 4, 7, 10
+
+            //    }
+
+            //}
+
+        }
+    }   
+
+}
