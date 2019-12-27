@@ -1,52 +1,14 @@
-4
-3
 1
-10
-7
-0
-
-i outside forLoop: 0
-Length: 6
-j: 0
-temp ifLoop: 3
-j: 1
-temp ifLoop: 1
-j: 2
-j: 3
-temp ifLoop: 7
-j: 4
-temp ifLoop: 0
-
-i outside forLoop: 1
-Length: 6
-j: 0
-temp ifLoop: 1
-j: 1
-j: 2
-j: 3
-temp ifLoop: 0
-
-i outside forLoop: 2
-Length: 6
-j: 0
-j: 1
-j: 2
-temp ifLoop: 0
-
-i outside forLoop: 3
-Length: 6
-j: 0
-j: 1
-temp ifLoop: 0
-
-i outside forLoop: 4
-Length: 6
-j: 0
-temp ifLoop: 0
-0
-1
+2
 3
 4
-7
-10
-time taken: 00:00:00.0137500
+5
+6
+Count: 0
+1
+2
+3
+4
+5
+6
+time taken: 00:00:00.0042776
