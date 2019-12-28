@@ -20,9 +20,9 @@ namespace bubbleSort
             Stopwatch MyTimer = new Stopwatch();
             
             //int[] unsortedList = { 0, 4, 3, 1, 10, 7 };// Why I keep forget about array?
-            //int[] unsortedList = { 10, 4, 3, 1, 7, 0 };// Why I keep forget about array?
+            int[] unsortedList = { 10, 4, 3, 1, 7, 0 };// Why I keep forget about array?
             //int[] unsortedList = { 2, 7, 4, 1, 5, 3};
-            int[] unsortedList = { 1, 2, 3, 4, 5, 6 };
+            //int[] unsortedList = { 1, 2, 3, 4, 5, 6 };
             int testOG = 0;//how to pass by reference and value 
 
             MyTimer.Start();
@@ -109,6 +109,8 @@ namespace bubbleSort
                 //Console.WriteLine("i outside forLoop: " + i);
                 //Console.WriteLine("Length: " + unsortedList.Length);
 
+                //int flag = 0; 
+
                 for (int j = 0; j < unsortedList.Length - (1 + i); j++)//2 + 1 length go 
                 {
                     //Console.WriteLine();
@@ -132,13 +134,23 @@ namespace bubbleSort
                         //Console.WriteLine("unsort[3] ifLoop: " + unsortedList[3]);
                         //int[] unsortedList = { 0, 4, 3, 1, 10, 7 }; 0, 1, 3, 4, 7, 10
                         count = count + 1;
+                        //flag = 1;
                     }
 
-                }
-            }
+                }//for
+
+                if (count == 0)
+                {                    
+                    break;
+                };
+
+                
+                Console.WriteLine("Count: " + count);
+
+            }//for 
 
             //testOG = testOG + 2;
-            Console.WriteLine("Count: " + count);
+            
             //Console.WriteLine("testOG Inside Class BubbleSort: " + testOG);
         }
     }
