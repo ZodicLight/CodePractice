@@ -6,127 +6,52 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.IO;
 
-namespace bubbleSort
+namespace Sort
 {
     class Program
     {
         static void Main()
         {
-            //int[] unsortedList = { 0, 4, 3, 1, 10, 7 };// Why I keep forget about array?
-            int[] unsortedList = { 4, 3, 1, 10, 7, 0 };// Why I keep forget about array?
-            int testOG = 0;//how to pass by reference and value 
+            int[] array = { 0, 1, 3, 4, 5, 10 };
+            Console.WriteLine("here");
 
-            foreach (int items in unsortedList)
+            BubbleSort one = new BubbleSort();
+            one.sort(array);
+
+            foreach (int item in array)
             {
-                Console.WriteLine(items);
+                Console.WriteLine(item);
+                Console.WriteLine("here");
             }
-
-            bubbleSort bubble = new bubbleSort();
-            bubble.BubbleSort(unsortedList, testOG);//still the same?
-
-            //Console.ReadLine();
-
-            foreach (int items in unsortedList)//reference issues?
-            {
-                Console.WriteLine(items);
-            }
-
-            //Console.WriteLine("testOG: " + testOG);
-            //Console.ReadLine();
+            Console.WriteLine("here");
+            Console.ReadLine();
         }
 
-
-        //class bubbleSort//Class within a class? How does that work? Why?
-        //{
-        //    public void BubbleSort(int[] unsortedList)
-        //    {
-        //        int temp;
-
-        //        for (int i = 0; i < unsortedList.Length - 1; i++)
-        //        {
-        //            for (int j = 0; j < unsortedList.Length - (1 + i); j++)
-        //            {
-        //                if (unsortedList[j] > unsortedList[j + 1])
-        //                {
-        //                    temp = unsortedList[j + 1];
-        //                    unsortedList[j + 1] = unsortedList[j];
-        //                    unsortedList[j] = temp;
-
-        //                }
-
-        //            }
-        //        }
-        //    }
-        //}
-
-
-        //public static void BubbleSort(int[] unsortedList)
-        //{
-        //    int temp;
-
-        //    for (int i = 0; i < unsortedList.Length-1; i++)
-        //    {
-        //        for (int j = 0; j < unsortedList.Length-(1 + i); j++)
-        //        {
-        //            if (unsortedList[j] > unsortedList[j+1])
-        //            {
-        //                temp = unsortedList[j + 1];
-        //                unsortedList[j + 1] = unsortedList[j];
-        //                unsortedList[j] = temp;
-
-        //            }
-
-        //        }
-        //    }
-        //}
     }
 
-    class bubbleSort
-    {
-        //pass by reference? 
+    class BubbleSort//class don't have signiture 
+	{
+        int temp;
 
-        public void BubbleSort(int[] unsortedList, int testOG)
+        public void sort(int[] array)
         {
-            int temp;
-
-            for (int i = 0; i < unsortedList.Length - 1; i++)// -1 will prevent the program crash but will it skip a loop and return incomplete result?
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                Console.WriteLine();
-                Console.WriteLine("i outside forLoop: " + i);
-                
-
-                for (int j = 0; j < unsortedList.Length - (1 + i); j++)//2 + 1 length go 
+                for (int j = 0; j < array.Length - (1 + i); i++)
                 {
-                    //Console.WriteLine();
-                    //int forLoopLen = unsortedList.Length - (1 + i);
-                    //int forLoopLen = unsortedList.Length;
-                    //Console.WriteLine("i inside forLoop: " + i);
-                    Console.WriteLine("j: " + j);
-                    //Console.WriteLine("length: " + forLoopLen);
-
-                    if (unsortedList[j] > unsortedList[j + 1])//compare to the next one
+                    if (array[j] > array[j + 1])
                     {
-                        
-                        temp = unsortedList[j + 1];
-                        unsortedList[j + 1] = unsortedList[j];
-                        unsortedList[j] = temp;
-
-                        Console.WriteLine("temp ifLoop: " + temp);
-                        
-                        Console.WriteLine("unsort[1] ifLoop: " + unsortedList[1]);
-                        Console.WriteLine("unsort[2] ifLoop: " + unsortedList[2]);
-                        Console.WriteLine("unsort[3] ifLoop: " + unsortedList[3]);
-                        //int[] unsortedList = { 0, 4, 3, 1, 10, 7 }; 0, 1, 3, 4, 7, 10
+                        temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                        //Console.WriteLine(array[j]);
 
                     }
 
                 }
             }
-
-            //testOG = testOG + 2;
-
-            //Console.WriteLine("testOG Inside Class BubbleSort: " + testOG);
         }
-    }   
+    }
 
 }
+
