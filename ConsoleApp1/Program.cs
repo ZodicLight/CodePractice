@@ -6,68 +6,44 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.IO;
 
-namespace Sort
+namespace OOP
 {
+    //Encapsulation 
+    //object include property and method 
+
     class Program
     {
-        //write a visualisation version of this 
-        //still not clear how the for loop within the for loop do?
-
-
-        static void Main()
+        public static void Main()
         {
-            //int[] array = { 10, 4, 3, 1, 5, 0 };
-            int[] array = { 0, 1, 3, 4, 5, 10 };
+            //Procedural programing 
+            ////////////////////////
+            //int baseSalary = 30000;
+            //int overtime = 10;
+            //int rate = 20; 
 
-            BubbleSort one = new BubbleSort();
-            one.sort(array);
+            //function getWage(baseSalary, overtime, rate)
+            //{
+            //    return baseSalary + (overtime * rate);
+            //}
 
-            foreach (int item in array)
-            {
-                Console.WriteLine(item);
-            }
-            //Console.ReadLine();
+            Employee kevin = new Employee();
+            //kevin.GetWage();
+            Console.WriteLine(kevin.GetWage());
+            Console.ReadLine();
+
         }
-
     }
 
-    class BubbleSort//class don't have signiture 
+    public class Employee
     {
+        public int BaseSalary = 30000;
+        public int Overtime = 10;
+        public int Rate = 20;
         
-
-        public void sort(int[] array)
+        public int GetWage()
         {
-            int temp;
-            int count=0;
-
-            for (int i = 0; i < array.Length - 1; i++)
-            {
-                for (int j = 0; j < array.Length - (1 + i); j++)
-                {
-                    if (array[j] > array[j + 1])
-                    {
-                        temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
-                        //Console.WriteLine(array[j]);
-                        count = count + 1;
-
-
-                    }
-
-                }
-
-                if (count == 0)
-                {
-                    //Console.WriteLine("break");
-                    break;
-                    //Console.WriteLine("break");
-                }
-                Console.WriteLine("break");
-            }
-            Console.WriteLine("break");
-            Console.WriteLine("count: " + count);
-        }
+            return this.BaseSalary + (this.Overtime * this.Rate);
+        } 
     }
 
 }

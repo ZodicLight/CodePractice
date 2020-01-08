@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bubbleSort.txt" />
     <Content Include="passByRefValue.txt" />
     <Content Include="RegX.txt" />
     <Content Include="temp.txt" />
