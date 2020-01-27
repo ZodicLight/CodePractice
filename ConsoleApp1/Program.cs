@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.IO;
 
-namespace Giraffe
+namespace Encapsulation
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Movie avengers = new Movie("The Avengers", "Joss Whedon", "Dog");
-            //Movie avengers = new Movie("The Avengers", "Joss Whedon", "PG-13");
-            Movie shrek = new Movie("Shrek", "Adam Adamson", "PG");
-            //Rating: G, PG, PG-13, R , NR
-            //avengers.rating = "dog";//this is bad 
-            shrek.Rating = "R"; //should return NR??
-            Console.WriteLine(shrek.Rating);
+            MyClass MyObject = new MyClass(5, 7);
+
+            //MyObject.Total = 23;
+            Console.WriteLine(MyObject.Total);
 
         }
 
