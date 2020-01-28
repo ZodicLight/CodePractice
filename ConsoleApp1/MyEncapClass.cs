@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encapsulation
 {
-    class MyClass
+    class MyEncapClass
     {
         private int _total; 
 
@@ -16,7 +16,7 @@ namespace Encapsulation
             //set { _total = value; }//remove this otherwise allow the user to break the code. User has no way to mis use this class. 
         }
 
-        public MyClass(int Value1, int Value2)
+        public MyEncapClass(int Value1, int Value2)//constructor, have to be the same name as the class
         {
             _total = addTwoIntegers(Value1, Value2);
         }

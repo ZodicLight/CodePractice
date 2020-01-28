@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdditionClass.cs" />
+    <Compile Include="AddTwoDoubles.cs" />
     <Compile Include="Movie.cs" />
-    <Compile Include="MyClass.cs" />
+    <Compile Include="MyEncapClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bubbleSort.txt" />
+    <Content Include="EncapsulationOOP.txt" />
     <Content Include="GetterSetter.txt" />
     <Content Include="OOP.txt" />
     <Content Include="passByRefValue.txt" />
