@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AdditionClass.cs" />
     <Compile Include="AddTwoDoubles.cs" />
+    <Compile Include="AddTwoIntegers.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MyEncapClass.cs" />
     <Compile Include="Program.cs" />
