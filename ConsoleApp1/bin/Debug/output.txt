@@ -1,1 +1,2 @@
-12
+interface print method
+Interface Print Method2

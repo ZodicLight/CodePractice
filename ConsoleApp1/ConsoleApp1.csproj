@@ -55,6 +55,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Abstract_Class_Tutorial.txt" />
     <Content Include="bubbleSort.txt" />
     <Content Include="EncapsulationOOP.txt" />
     <Content Include="GetterSetter.txt" />
