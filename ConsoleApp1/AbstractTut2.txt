@@ -1,0 +1,47 @@
+﻿using System; //what is system? namespace. Interact with OS include "Console". Kinda like a shortcut 
+//https://www.youtube.com/watch?v=vfH16HK8fPo
+//https://docs.microsoft.com/en-us/dotnet/api/system?view=netframework-4.8
+
+//using System.Collections.Generic;
+//https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic?view=netframework-4.8
+
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//look into what those class do above
+
+//Part 32 - C# Tutorial - Abstract classes in c#.avi
+//https://www.youtube.com/watch?v=7amjs2y_dgo
+//sealed class can't be inheritance 
+
+
+public abstract class Customer//sealed can't be use.. seal mean can't use as base class 
+{
+    public abstract void Print();
+    //public abstract int temp { set; get; }//what is properties? set & get. virtul and abstract can't be private 
+    //this is call property? really?
+    public double game;
+
+    //public void Print()//non abstract method, this work inside abstract class!! You can't do it in interface 
+    //{
+    //    Console.WriteLine("Print");
+    //}
+}
+
+public class Program : Customer
+{
+    public override void Print()//abstract with ovrride 
+    {
+        Console.WriteLine("Print abstract Method");
+    }
+
+    public static void Main()
+    {
+        //Program P = new Program();// cannot create instance of abstract class
+        Customer P = new Program();
+
+        P.Print();
+
+    }
+}
+

@@ -59,11 +59,12 @@
     <Content Include="bubbleSort.txt" />
     <Content Include="EncapsulationOOP.txt" />
     <Content Include="GetterSetter.txt" />
+    <Content Include="Interface.txt" />
     <Content Include="OOP.txt" />
     <Content Include="passByRefValue.txt" />
     <Content Include="RegX.txt" />
     <Content Include="temp.txt" />
-    <Content Include="TextFile1.txt" />
+    <Content Include="AbstractTut2.txt" />
     <Content Include="Tut21.txt" />
     <Content Include="Tut19_enum.txt" />
     <Content Include="Tut19_final.txt" />

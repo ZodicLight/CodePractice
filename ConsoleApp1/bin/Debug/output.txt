@@ -1,2 +1,1 @@
-interface print method
-Interface Print Method2
+Print
