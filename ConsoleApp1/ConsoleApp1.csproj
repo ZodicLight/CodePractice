@@ -57,6 +57,7 @@
   <ItemGroup>
     <Content Include="AbstractVsInterface.txt" />
     <Content Include="Abstract_Class_Tutorial.txt" />
+    <Content Include="amazonQ1.txt" />
     <Content Include="bubbleSort.txt" />
     <Content Include="EncapsulationOOP.txt" />
     <Content Include="GetterSetter.txt" />
