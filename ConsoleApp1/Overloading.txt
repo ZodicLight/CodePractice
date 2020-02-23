@@ -1,0 +1,68 @@
+﻿using System; //what is system? namespace. Interact with OS include "Console". Kinda like a shortcut 
+              //using System.Linq;
+              //using System.Text;
+              //using System.Threading.Tasks;
+              //look into what those class do above
+
+
+class Program
+{
+    //overloading 
+    //signature of the method not include static and return type
+
+    public static void Main()
+    {
+
+    }
+
+    public static void Add(int FN, int SN)
+    {
+        Console.WriteLine("Sum = {0}", FN + SN);
+
+    }
+
+
+    //public void Add(int FN, int SN) //two methods with same signature but different in static status will not able to overloading 
+    //{
+    //    Console.WriteLine("Sum = {0}", FN + SN);
+
+    //}
+
+    //public static int Add(int FN, int SN)//two methods with same signature but different return types will not able to overloading  
+    //{
+    //    Console.WriteLine("Sum = {0}", FN + SN);
+    //    return FN + SN;
+
+    //}
+
+    public float Add(float FN, float SN)//different type
+    {
+        Console.WriteLine("Sum = {0}", FN + SN);
+
+        return FN;
+
+    }
+
+
+    //================================
+
+    public void Add(int FN, int SN, int TN)
+    {
+        Console.WriteLine("Sum = {0}", FN + SN);
+
+    }
+
+    public void Add(int FN, int SN, out int TN)//out, how to use this? value ref out
+    {
+        Console.WriteLine("Sum = {0}", TN = FN + SN);
+
+    }
+
+    public void Add(int FN, int SN, int TN, int FourthNum)
+    {
+        Console.WriteLine("Sum = {0}", FN + SN);
+
+    }
+}
+    
+

@@ -55,6 +55,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AbstractTut3.txt" />
     <Content Include="AbstractVsInterface.txt" />
     <Content Include="Abstract_Class_Tutorial.txt" />
     <Content Include="amazonQ1.txt" />
@@ -63,6 +64,7 @@
     <Content Include="GetterSetter.txt" />
     <Content Include="Interface.txt" />
     <Content Include="OOP.txt" />
+    <Content Include="Overloading.txt" />
     <Content Include="passByRefValue.txt" />
     <Content Include="RegX.txt" />
     <Content Include="temp.txt" />

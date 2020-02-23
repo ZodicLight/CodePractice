@@ -1,47 +1,27 @@
 ﻿using System; //what is system? namespace. Interact with OS include "Console". Kinda like a shortcut 
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//look into what those class do above
+              //using System.Linq;
+              //using System.Text;
+              //using System.Threading.Tasks;
+              //look into what those class do above
 
-
-namespace ConsoleApplication1
+namespace Giraffe
 {
-    public abstract class AbstractClass
-    {
-        public virtual void AbstractClassMethod()
-        {
-            Console.WriteLine("Default Implementation");
-        }
-    }
-
-    public class SomeClass : AbstractClass
-    {
-        
-    }
-
-    public class SomeOtherClass : AbstractClass
-    {
-        public override void AbstractClassMethod()
-        {
-            Console.WriteLine("new Implementation");
-        }
-    }
-    
     class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            SomeClass temp = new SomeClass();
-            temp.AbstractClassMethod();
-
-            SomeOtherClass soc = new SomeOtherClass();
-            soc.AbstractClassMethod();
-
+            Console.WriteLine(Math.Sqrt(144));
+            UsefulTools.SayHi("Joe");
+            //Console.ReadLine();
         }
-
     }
-    
 
+    class UsefulTools
+    {
+        public static void SayHi(string name)
+        {
+            Console.WriteLine("hello" + name);
+        }
+    }
 }
 
