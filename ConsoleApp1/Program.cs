@@ -4,24 +4,21 @@
               //using System.Threading.Tasks;
               //look into what those class do above
 
-namespace Giraffe
+//Part 20 - C# Tutorial - Static and instance class members.avi
+//https://www.youtube.com/watch?v=cFQLmHCguGs
+
+class Circle
 {
-    class Program
+    float _PI = 3.141F;
+    int _Radius;//private?
+
+    public Circle(int Radius)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(Math.Sqrt(144));
-            UsefulTools.SayHi("Joe");
-            //Console.ReadLine();
-        }
+        this._Radius = Radius;
     }
 
-    class UsefulTools
+    public float CalculateArea()
     {
-        public static void SayHi(string name)
-        {
-            Console.WriteLine("hello" + name);
-        }
+        return this._PI * this._Radius * this._Radius;
     }
 }
-

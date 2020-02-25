@@ -67,6 +67,7 @@
     <Content Include="Overloading.txt" />
     <Content Include="passByRefValue.txt" />
     <Content Include="RegX.txt" />
+    <Content Include="static1.txt" />
     <Content Include="temp.txt" />
     <Content Include="AbstractTut2.txt" />
     <Content Include="Tut21.txt" />
